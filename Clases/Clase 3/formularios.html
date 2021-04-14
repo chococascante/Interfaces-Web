@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./formularios.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <h1>Registro de usuario</h1>
+      <form onsubmit="">
+        <div>
+          <label for="identificacion">Identificación</label>
+          <input id="identificacion" type="text" placeholder="1-1111-1111" />
+        </div>
+
+        <div>
+          <label for="nombres">Nombres</label>
+          <input id="nombres" type="text" placeholder="Luis Alonzo" />
+        </div>
+
+        <div>
+          <label for="apellidos">Apellidos</label>
+          <input
+            id="apellidos"
+            maxlength="25"
+            type="text"
+            placeholder="Cascante Franco"
+          />
+        </div>
+
+        <div>
+          <label for="correo">Correo electrónico</label>
+          <input
+            disabled
+            id="correo"
+            type="email"
+            placeholder="test@test.com"
+          />
+        </div>
+
+        <div>
+          <label for="contrasena">Contraseña</label>
+          <input id="contrasena" type="password" />
+        </div>
+
+        <div>
+          <label for="fechaNacimiento">Fecha de Nacimiento</label>
+          <input id="fechaNacimiento" type="datetime-local" />
+        </div>
+
+        <div>
+          <label for="telefono">Teléfono</label>
+          <input id="telefono" type="tel" placeholder="8888-8888" />
+        </div>
+
+        <div>
+          <label for="estadoCivil">Estado Civil</label>
+          <div class="radio">
+            <input
+              id="estadoCivil"
+              type="radio"
+              name="genero"
+              value="Soltero"
+            />
+            <label for="soltero">Soltero</label>
+          </div>
+
+          <div class="radio">
+            <input id="casado" type="radio" name="genero" value="Casado" />
+            <label for="femenino">Casado</label>
+          </div>
+
+          <div class="radio">
+            <input
+              id="divorciado"
+              type="radio"
+              name="genero"
+              value="Divorciado"
+            />
+            <label for="nodice">Divorciado</label>
+          </div>
+
+          <div class="radio">
+            <input
+              id="unionLibre"
+              type="radio"
+              name="genero"
+              value="Union Libre"
+            />
+            <label for="nodice">Union Libre</label>
+          </div>
+        </div>
+
+        <div>
+          <label for="genero">Género</label>
+          <select id="genero" name="genero">
+            <option>Seleccione un género</option>
+            <option value="masculino">Masculino</option>
+            <option value="femenino">Femenino</option>
+            <option value="nodice">Prefiero no decir</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="hobbies">Hobbies</label>
+          <div class="radio">
+            <input type="checkbox" name="Ciclismo" id="ciclismo" />
+            <label for="ciclismo">Ciclismo</label>
+          </div>
+
+          <div class="radio">
+            <input type="checkbox" name="Streaming" id="streaming" />
+            <label for="streaming">Streaming</label>
+          </div>
+
+          <div class="radio">
+            <input type="checkbox" name="Videojuegos" id="videojuegos" />
+            <label for="videojuegos">Videojuegos</label>
+          </div>
+        </div>
+
+        <div>
+          <label for="curriculumn">Curriculumn</label>
+          <input
+            id="curriculumn"
+            type="file"
+            accept=".pdf, .zip, .jpeg, .jpg, .png"
+          />
+        </div>
+
+        <div>
+          <label for="comentarios">Comentarios</label>
+          <textarea id="comentarios"></textarea>
+        </div>
+
+        <button type="submit">Mandar información</button>
+      </form>
+    </main>
+  </body>
+</html>

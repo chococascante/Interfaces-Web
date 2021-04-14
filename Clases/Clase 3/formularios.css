@@ -1,0 +1,19 @@
+div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+input {
+  max-width: 300px;
+  margin-top: 8px;
+}
+
+img {
+  width: 16px;
+  height: 16px;
+}
+
+.radio {
+  display: inline-block;
+}

@@ -29,33 +29,19 @@ function borrarPrimerElemento() {
 
 function borrarTodosLosElementos() {
   const contenedor = document.getElementById("contenedor");
-  console.log("DIV", contenedor);
+  console.log("DIV", contenedor.outerHTML);
 
-  const hijos = contenedor.childNodes;
+  const hijos = Array.from(contenedor.childNodes);
   console.log("Hijos", hijos);
 
-  let i = 0;
-  while (i < hijos.length) {
-    if (i == 5) {
-      break;
-    }
-    console.log(hijos[i]);
-    i++;
-  }
+  const divs = document.getElementsByTagName("DIV");
+  console.log("DIVS", divs);
 
-  // for (let i = 0; i < hijos.length; i++) {
-  //   console.log(hijos[i]);
-  // }
+  contenedor.innerHTML = `
+    <h1>Mi formulario</h1>
+    <p id="texto-0">Texto 0</p>
+    <p id="texto-1">Texto 1</p>
+    <p id="texto-2">Texto 2</p>
+`;
+  contenedor.innerHTML = "";
 }
-
-// not        false
-// if (!(numero && booleano)) {
-//   // console.log("Hola");
-//   const numero = 0;
-//   const string = "Esto es una cadena de caracteres";
-//   const booleano = true;
-// }
-
-// && AND => Y
-// || OR => O
-// ! NOT negación
