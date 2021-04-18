@@ -14,6 +14,17 @@ img {
   height: 16px;
 }
 
+.fila {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 .radio {
   display: inline-block;
+}
+
+.boton-icono {
+  width: 36px;
+  height: 36px;
 }

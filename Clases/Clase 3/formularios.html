@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./formularios.css" />
+    <script src="./formularios.js"></script>
     <title>Document</title>
   </head>
   <body>
@@ -23,18 +24,13 @@
 
         <div>
           <label for="apellidos">Apellidos</label>
-          <input
-            id="apellidos"
-            maxlength="25"
-            type="text"
-            placeholder="Cascante Franco"
-          />
+          <input id="apellidos" type="text" placeholder="Cascante Franco" />
         </div>
 
         <div>
           <label for="correo">Correo electrónico</label>
           <input
-            disabled
+            required
             id="correo"
             type="email"
             placeholder="test@test.com"
@@ -43,7 +39,20 @@
 
         <div>
           <label for="contrasena">Contraseña</label>
-          <input id="contrasena" type="password" />
+
+          <div class="fila">
+            <input id="contrasena" type="password" />
+            <button
+              type="button"
+              class="boton-icono"
+              onclick="mostrarContrasena()"
+            >
+              <img
+                id="icono-contrasena"
+                src="../../assets/eye-slash-solid.svg"
+              />
+            </button>
+          </div>
         </div>
 
         <div>
@@ -60,16 +69,16 @@
           <label for="estadoCivil">Estado Civil</label>
           <div class="radio">
             <input
-              id="estadoCivil"
+              id="soltero"
               type="radio"
-              name="genero"
+              name="estadoCivil"
               value="Soltero"
             />
             <label for="soltero">Soltero</label>
           </div>
 
           <div class="radio">
-            <input id="casado" type="radio" name="genero" value="Casado" />
+            <input id="casado" type="radio" name="estadoCivil" value="Casado" />
             <label for="femenino">Casado</label>
           </div>
 
@@ -77,7 +86,7 @@
             <input
               id="divorciado"
               type="radio"
-              name="genero"
+              name="estadoCivil"
               value="Divorciado"
             />
             <label for="nodice">Divorciado</label>
@@ -87,7 +96,7 @@
             <input
               id="unionLibre"
               type="radio"
-              name="genero"
+              name="estadoCivil"
               value="Union Libre"
             />
             <label for="nodice">Union Libre</label>
@@ -136,7 +145,7 @@
           <textarea id="comentarios"></textarea>
         </div>
 
-        <button type="submit">Mandar información</button>
+        <button type="submit" id="boton-submit">Mandar información</button>
       </form>
     </main>
   </body>
