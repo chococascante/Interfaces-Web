@@ -15,6 +15,7 @@
         color: #333;
       }
     </style>
+    <script src="./index.js"></script>
   </head>
   <body>
     <main style="display: flex; width: 100%; flex-direction: column">
@@ -94,7 +95,15 @@
         </section>
         <section>
           <h4>Evaluación</h4>
-          <table>
+          <form>
+            <label for="fila">Fila</label>
+            <input type="text" id="fila" />
+            <label for="columna">Columna</label>
+            <input type="text" id="columna" />
+
+            <button type="button" id="buscar">Buscar</button>
+          </form>
+          <table id="tablaEvaluacion">
             <tr>
               <th>Rubro</th>
               <th>Porcentaje</th>
