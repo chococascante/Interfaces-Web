@@ -98,24 +98,8 @@ aside {
   position: relative;
 }
 
-/* 
-  Normalmente uso queries para
-  1. Cambiar la dirección de un flex
-  2. Cambiar tamaño de imagenes
-  3. Mostrar/quitar elementos de la pantalla
-  4. Colapsar navegaciones
-*/
-
-nav {
-  width: 100vw;
-  background: #fff;
-  padding: 16px 32px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
 .home-logo {
+  width: 48px;
   height: 48px;
 }
 
@@ -124,9 +108,20 @@ nav {
   width: 48px;
 }
 
-a {
-  font-size: 1rem;
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 12px 6px 12px;
 }
+
+/* 
+  Normalmente uso queries para
+  1. Cambiar la dirección de un flex
+  2. Cambiar tamaño de imagenes
+  3. Mostrar/quitar elementos de la pantalla
+  4. Colapsar navegaciones
+*/
 
 @media (max-width: 1279px) {
   aside {
@@ -135,27 +130,21 @@ a {
     background-color: #f1f1f1;
   }
 
-  .navbar {
-    overflow: hidden;
-  }
-
-  .navbar a:not(:first-child) {
+  .navbar-container {
     display: none;
   }
 
-  .navbar a.icon {
-    float: right;
+  .movil {
     display: block;
+    position: absolute;
+    z-index: 999;
+    background-color: #fff;
+    padding: 6px 12px;
+    transform: translate(-50%, 0);
   }
 
-  .navbar.movil {
+  .navbar {
     position: relative;
-  }
-
-  .navbar.movil a {
-    float: none;
-    display: block;
-    text-align: left;
   }
 }
 
@@ -198,7 +187,12 @@ a {
     align-items: center;
   }
 
-  .navbar a:first-child {
+  .navbar-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .navbar-icon {
     display: none;
   }
 }
