@@ -1,0 +1,13 @@
+.contenedor-slider {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.slide {
+  display: none;
+}
+
+img {
+  width: 1200px;
+}

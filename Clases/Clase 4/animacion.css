@@ -1,0 +1,99 @@
+div {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;
+  animation-name: pollito;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  /* animation: pollito 4s infinite; */
+}
+
+.mario {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  top: 350px;
+  left: 0px;
+  background-image: url("../../assets/marioParado.png");
+  animation: marioVolando 4s infinite;
+}
+
+@keyframes pollito {
+  0% {
+    background-color: red;
+    left: 0px;
+    top: 0px;
+  }
+
+  25% {
+    background-color: yellow;
+    left: 200px;
+    top: 0px;
+  }
+
+  50% {
+    background-color: blue;
+    left: 200px;
+    top: 200px;
+  }
+
+  75% {
+    background-color: green;
+    left: 0px;
+    top: 200px;
+  }
+
+  100% {
+    background-color: red;
+    left: 0px;
+    top: 0px;
+  }
+}
+
+@keyframes marioVolando {
+  0% {
+    width: 150px;
+    height: 150px;
+    top: 350px;
+    left: 0px;
+    background-size: contain;
+    background-image: url(../../assets/marioParado.png);
+  }
+
+  25% {
+    width: 150px;
+    height: 150px;
+    top: 350px;
+    left: 200px;
+    background-size: contain;
+    background-image: url(../../assets/mario.png);
+  }
+
+  50% {
+    width: 150px;
+    height: 150px;
+    top: 200px;
+    left: 200px;
+    background-size: contain;
+    background: url(../../assets/marioVolando.png);
+  }
+
+  75% {
+    width: 150px;
+    height: 150px;
+    top: 350px;
+    left: 400px;
+    background-size: contain;
+    background-image: url(../../assets/mario.png);
+  }
+
+  100% {
+    width: 150px;
+    height: 150px;
+    top: 350px;
+    left: 0px;
+    background-size: contain;
+    background-image: url(../../assets/marioParado.png);
+  }
+}
