@@ -1,0 +1,30 @@
+@import "./variables.scss";
+
+body {
+  color: $color-primario;
+}
+
+.scss {
+  color: $color-secundario;
+  background: $color-primario;
+}
+
+.sass {
+  color: $color-primario;
+}
+
+.grupo-input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 90vw;
+
+  @media (max-width: $breakpoint-table) {
+    flex-direction: column;
+  }
+
+  @media (min-width: 1080px) {
+    background: rebeccapurple;
+  }
+}

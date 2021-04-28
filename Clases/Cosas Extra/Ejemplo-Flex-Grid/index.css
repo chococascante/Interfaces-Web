@@ -1,0 +1,22 @@
+.flex-grid {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.flex-item {
+  width: 22%;
+}
+
+@media (max-width: 720px) {
+  .flex-item {
+    width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .flex-item {
+    width: 90%;
+  }
+}
