@@ -5,6 +5,10 @@
   justify-content: space-evenly;
 }
 
+img {
+  width: 100%;
+}
+
 .flex-item {
   width: 22%;
 }
