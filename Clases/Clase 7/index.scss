@@ -1,0 +1,170 @@
+@import "./variables.scss";
+
+@mixin mixin($top, $right, $translateX, $translateY) {
+  position: absolute;
+  top: $top;
+  left: $right;
+  transform: translate($translateX, $translateY);
+}
+
+@mixin mediaMaxWidth($width) {
+  @media (max-width: $width) {
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  font-family: $font-primary;
+  color: $color-text;
+  margin: auto;
+  max-width: 1200px;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 5% 1rem 5%;
+  background: $color-primary;
+  position: sticky;
+  top: 0;
+  z-index: 998;
+}
+
+.header--contenedor {
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header--nav {
+  display: flex;
+  align-items: center;
+
+  font-size: 1.6rem;
+  a {
+    margin: 0 5% 0 5%;
+    white-space: nowrap;
+  }
+
+  i {
+    display: none;
+  }
+
+  div {
+    min-width: 500px;
+  }
+}
+
+@media (max-width: 960px) {
+  i {
+    margin-left: 1rem;
+  }
+
+  .header--contenedor {
+    justify-content: flex-end;
+  }
+
+  .header--nav {
+    div {
+      display: none;
+      min-width: 0;
+    }
+
+    div.header--nav--dropdown {
+      display: flex;
+      flex-direction: column;
+      z-index: 999;
+      position: absolute;
+      top: 10%;
+      right: 0;
+      background: $color-primary;
+      padding: 0.5rem 1rem;
+    }
+
+    i {
+      display: block;
+    }
+  }
+}
+
+.hero-banner {
+  width: 100%;
+  position: relative;
+
+  img {
+    width: 100%;
+    z-index: -1;
+  }
+
+  h2 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    padding: 1rem 2rem;
+    white-space: nowrap;
+    background: rgba(255, 243, 176, 0.7);
+  }
+
+  div {
+    @include mixin(50, 50, -10%, 45%);
+    // position: absolute;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-10%, 45%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  button {
+    margin-top: 2rem;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    background: $color-primary;
+    color: $color-text;
+  }
+
+  @media (max-width: 960px) {
+    h2 {
+      font-size: 1rem;
+    }
+
+    button {
+      font-size: 0.75rem;
+      margin-top: 0.75rem;
+    }
+
+    div {
+      top: 30%;
+      left: 35%;
+    }
+  }
+}
+
+.parallax {
+  min-height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-image: url("../../assets/lago.jpg");
+
+  p {
+    padding: 4rem 2rem;
+    background: $color-text-background;
+    color: $color-text;
+  }
+}
+
+footer {
+  height: 400px;
+}
