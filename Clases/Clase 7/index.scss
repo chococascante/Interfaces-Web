@@ -64,6 +64,35 @@ body {
   }
 }
 
+.grid--container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas:
+    "header header header header"
+    "item item item item";
+
+  margin-bottom: 4rem;
+
+  img {
+    width: 250px;
+  }
+}
+
+.contenedor-slider {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.slide {
+  display: none;
+}
+
+img {
+  width: 1200px;
+}
+
 @media (max-width: 960px) {
   i {
     margin-left: 1rem;

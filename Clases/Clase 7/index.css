@@ -3,7 +3,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -16,11 +17,18 @@ body {
 
 .header {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 1rem 5% 1rem 5%;
   background: #fff3b0;
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 998;
@@ -28,43 +36,90 @@ body {
 
 .header--contenedor {
   width: 75%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .header--nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 1.6rem;
 }
+
 .header--nav a {
   margin: 0 5% 0 5%;
   white-space: nowrap;
 }
+
 .header--nav i {
   display: none;
 }
+
 .header--nav div {
   min-width: 500px;
+}
+
+.grid--container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+      grid-template-areas: "header header header header" "item item item item";
+  margin-bottom: 4rem;
+}
+
+.grid--container img {
+  width: 250px;
+}
+
+.contenedor-slider {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.slide {
+  display: none;
+}
+
+img {
+  width: 1200px;
 }
 
 @media (max-width: 960px) {
   i {
     margin-left: 1rem;
   }
-
   .header--contenedor {
-    justify-content: flex-end;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
-
   .header--nav div {
     display: none;
     min-width: 0;
   }
   .header--nav div.header--nav--dropdown {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     z-index: 999;
     position: absolute;
     top: 10%;
@@ -76,14 +131,17 @@ body {
     display: block;
   }
 }
+
 .hero-banner {
   width: 100%;
   position: relative;
 }
+
 .hero-banner img {
   width: 100%;
   z-index: -1;
 }
+
 .hero-banner h2 {
   font-size: 3rem;
   text-transform: uppercase;
@@ -91,15 +149,25 @@ body {
   white-space: nowrap;
   background: rgba(255, 243, 176, 0.7);
 }
+
 .hero-banner div {
   position: absolute;
   top: 50;
   left: 50;
-  transform: translate(-10%, 45%);
+  -webkit-transform: translate(-10%, 45%);
+          transform: translate(-10%, 45%);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .hero-banner button {
   margin-top: 2rem;
   font-size: 2rem;
@@ -108,6 +176,7 @@ body {
   background: #fff3b0;
   color: #333;
 }
+
 @media (max-width: 960px) {
   .hero-banner h2 {
     font-size: 1rem;
@@ -130,6 +199,7 @@ body {
   background-size: cover;
   background-image: url("../../assets/lago.jpg");
 }
+
 .parallax p {
   padding: 4rem 2rem;
   background: #fff3b0a8;
@@ -139,5 +209,4 @@ body {
 footer {
   height: 400px;
 }
-
 /*# sourceMappingURL=index.css.map */
